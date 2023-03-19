@@ -42,6 +42,6 @@ export const Phonebook = () => {
         />
         <h2>Contacts:</h2>
         <Filter handleInput={handleChange} value={filter} />
-        {contacts.length ? <ContactList contacts={contacts} removeContact={removeContact} /> : null}
+        {contacts && ( contacts.length ? <ContactList contacts={contacts} removeContact={removeContact} /> : null )}
     </div>;
 }
